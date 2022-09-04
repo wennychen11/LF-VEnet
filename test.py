@@ -67,7 +67,7 @@ def main():
     print('loaded {} LFIs from {}'.format(len(test_loader), test_path))
 
     print('using network {}'.format(opt.network_name))
-    model = SeNet(n_view=opt.n_view, scale=opt.scale, layer_num=opt.layer_num).to(device)
+    model = VEnet(n_view=opt.n_view, scale=opt.scale, layer_num=opt.layer_num).to(device)
 
     print('loading pretrained model')
     resume_path = os.path.join(opt.save_path, 'model_x{}_bicubic.pth'.format(opt.scale))
